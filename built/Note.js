@@ -1,3 +1,4 @@
+/*comment*/
 var Note = React.createClass({
     displayName: 'Note',
 

@@ -74,3 +74,9 @@ div.note > textarea {
     top: 10px;
     right: 10px;
 }
+
+.color_me_cool{
+    background: radial-gradient(ellipse at center, #eab92d 57%, #c79810 99%);
+    margin-top: -1px;
+    margin-bottom:-1px;
+}

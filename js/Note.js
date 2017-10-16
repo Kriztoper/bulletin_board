@@ -8,9 +8,10 @@ var Note = React.createClass({
         this.style = {
             right: this.randomBetween(0, window.innerWidth - 150) + 'px',
             top: this.randomBetween(0, window.innerHeight - 150) + 'px',
-            transform: 'rotate(' + this.randomBetween(-15, 15) + 'deg)'
+            transform: 'rotate(' + this.randomBetween(-15, 15) + 'deg)'//enables the note to be displayed on a tilt 15 degrees to the right or left from center
         };
     },
+    //This function enables the note to be moved around the screen
     componentDidMount: function () {
         $(this.getDOMNode()).draggable();
     },
@@ -40,9 +41,9 @@ var Note = React.createClass({
             React.createElement(
                 'span',
                 null,
-                React.createElement('button', { onClick: this.edit,
+                React.createElement('button', { onClick: this.edit, //enables the note to be edited
                     className: 'btn btn-primary glyphicon glyphicon-pencil' }),
-                React.createElement('button', { onClick: this.remove,
+                React.createElement('button', { onClick: this.remove, // enables the note to be deleted
                     className: 'btn btn-danger glyphicon glyphicon-trash' })
             )
         );
@@ -134,3 +135,4 @@ var Board = React.createClass({
 });
 
 React.render(React.createElement(Board, { count: 50 }), document.getElementById('react-container'));
+
